@@ -102,7 +102,12 @@ This is a modern, full-stack portfolio website built with React and Express, sho
 ## Changelog
 
 - July 05, 2025. Initial setup
+- July 05, 2025. Updated personal information: Changed name to Hamza Shabbir, email to hazily18@gmail.com, GitHub to https://github.com/hazily18, and removed Twitter references
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- Name: Hamza Shabbir
+- Email: hazily18@gmail.com  
+- GitHub: https://github.com/hazily18
+- No Twitter account/references
+- Preferred communication style: Simple, everyday language

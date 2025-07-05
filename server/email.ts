@@ -64,7 +64,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
     }
 
     // Create email data for logging
-    const emailData = createContactEmail(data, "john.smith@email.com"); // Replace with your actual email
+    const emailData = createContactEmail(data, "hazily18@gmail.com");
     
     console.log("📧 Contact form submission:");
     console.log(`From: ${data.name} (${data.email})`);

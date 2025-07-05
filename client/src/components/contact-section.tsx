@@ -50,8 +50,6 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      console.log('Sending contact form data:', formData);
-      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -60,15 +58,11 @@ export default function ContactSection() {
         body: JSON.stringify(formData),
       });
 
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const result = await response.json();
-      console.log('Response result:', result);
 
       if (result.success) {
         toast({
@@ -117,26 +111,20 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <i className="fas fa-envelope text-blue-600 text-xl mr-4"></i>
-                  <a href="mailto:john.smith@email.com" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    john.smith@email.com
+                  <a href="mailto:hazily18@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    hazily18@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center">
                   <i className="fab fa-linkedin text-blue-600 text-xl mr-4"></i>
-                  <a href="https://linkedin.com/in/johnsmith" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    linkedin.com/in/johnsmith
+                  <a href="https://linkedin.com/in/hamzashabbir" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    linkedin.com/in/hamzashabbir
                   </a>
                 </div>
                 <div className="flex items-center">
                   <i className="fab fa-github text-blue-600 text-xl mr-4"></i>
-                  <a href="https://github.com/johnsmith" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    github.com/johnsmith
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <i className="fab fa-twitter text-blue-600 text-xl mr-4"></i>
-                  <a href="https://twitter.com/johnsmith" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    twitter.com/johnsmith
+                  <a href="https://github.com/hazily18" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    github.com/hazily18
                   </a>
                 </div>
               </div>

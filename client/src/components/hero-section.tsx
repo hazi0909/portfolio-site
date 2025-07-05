@@ -40,7 +40,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            John Smith
+            Hamza Shabbir
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground">
             Full Stack Developer | AI Enthusiast | Freelancer
