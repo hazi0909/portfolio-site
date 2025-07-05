@@ -41,7 +41,7 @@ function SkillItem({ name, level, color }: SkillItemProps) {
       </div>
       <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div 
-          className={`skill-bar ${color.replace('text-', 'bg-')} h-2 rounded-full`}
+          className={`skill-bar h-2 rounded-full ${color.replace('text-', 'bg-')}`}
           style={{ width: `${animatedLevel}%` }}
         />
       </div>
@@ -65,14 +65,20 @@ export default function SkillsSection() {
   const aiSkills = [
     { name: "Machine Learning", level: 70, color: "text-emerald-600 dark:text-emerald-400" },
     { name: "TensorFlow", level: 65, color: "text-emerald-600 dark:text-emerald-400" },
-    { name: "Git", level: 90, color: "text-emerald-600 dark:text-emerald-400" },
+    { name: "AI Integration", level: 75, color: "text-emerald-600 dark:text-emerald-400" },
+  ];
+
+  const toolsSkills = [
+    { name: "Git", level: 90, color: "text-orange-600 dark:text-orange-400" },
+    { name: "Docker", level: 75, color: "text-orange-600 dark:text-orange-400" },
+    { name: "AWS", level: 80, color: "text-orange-600 dark:text-orange-400" },
   ];
 
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Frontend Skills */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
             <div className="flex items-center mb-6">
@@ -107,6 +113,19 @@ export default function SkillsSection() {
             </div>
             <div className="space-y-4">
               {aiSkills.map((skill) => (
+                <SkillItem key={skill.name} {...skill} />
+              ))}
+            </div>
+          </div>
+
+          {/* Tools & DevOps */}
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+            <div className="flex items-center mb-6">
+              <i className="fas fa-tools text-3xl text-orange-600 mr-4"></i>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Tools</h3>
+            </div>
+            <div className="space-y-4">
+              {toolsSkills.map((skill) => (
                 <SkillItem key={skill.name} {...skill} />
               ))}
             </div>
