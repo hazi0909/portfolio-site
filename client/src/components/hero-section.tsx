@@ -2,10 +2,26 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const handleDownloadResume = () => {
-    // TODO: Implement actual resume download
+    // Create a temporary link to download the resume
     const link = document.createElement('a');
-    link.href = '#resume';
-    link.click();
+    link.href = '/assets/resume.pdf';
+    link.download = 'resume.pdf';
+    link.target = '_blank';
+    
+    // Check if file exists before downloading
+    fetch('/assets/resume.pdf')
+      .then(response => {
+        if (response.ok) {
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          alert('Resume file not found. Please upload your resume.pdf to the client/public/assets/ folder.');
+        }
+      })
+      .catch(() => {
+        alert('Resume file not found. Please upload your resume.pdf to the client/public/assets/ folder.');
+      });
   };
 
   const handleContactMe = () => {

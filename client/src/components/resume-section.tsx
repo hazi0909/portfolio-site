@@ -3,8 +3,26 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function ResumeSection() {
   const handleDownloadResume = () => {
-    // TODO: Implement actual resume download
-    alert("Resume download functionality would be implemented here with the actual PDF file.");
+    // Create a temporary link to download the resume
+    const link = document.createElement('a');
+    link.href = '/assets/resume.pdf';
+    link.download = 'resume.pdf';
+    link.target = '_blank';
+    
+    // Check if file exists before downloading
+    fetch('/assets/resume.pdf')
+      .then(response => {
+        if (response.ok) {
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          alert('Resume file not found. Please upload your resume.pdf to the client/public/assets/ folder.');
+        }
+      })
+      .catch(() => {
+        alert('Resume file not found. Please upload your resume.pdf to the client/public/assets/ folder.');
+      });
   };
 
   return (
