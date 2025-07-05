@@ -41,8 +41,14 @@ function SkillItem({ name, level, color }: SkillItemProps) {
       </div>
       <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div 
-          className={`skill-bar h-2 rounded-full ${color.replace('text-', 'bg-')}`}
-          style={{ width: `${animatedLevel}%` }}
+          className="skill-bar h-2 rounded-full"
+          style={{ 
+            width: `${animatedLevel}%`,
+            backgroundColor: color.includes('blue') ? '#2563eb' : 
+                           color.includes('violet') ? '#7c3aed' : 
+                           color.includes('emerald') ? '#059669' : 
+                           color.includes('orange') ? '#ea580c' : '#2563eb'
+          }}
         />
       </div>
     </div>
