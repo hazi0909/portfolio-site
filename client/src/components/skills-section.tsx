@@ -8,30 +8,16 @@ interface SkillItemProps {
 
 function SkillItem({ name, level, color }: SkillItemProps) {
   const [animatedLevel, setAnimatedLevel] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
   const skillRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVisible) {
-            setIsVisible(true);
-            setTimeout(() => {
-              setAnimatedLevel(level);
-            }, 200);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    // Immediate animation for testing - this will animate as soon as component mounts
+    const timer = setTimeout(() => {
+      setAnimatedLevel(level);
+    }, 500);
 
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [level, isVisible]);
+    return () => clearTimeout(timer);
+  }, [level]);
 
   return (
     <div ref={skillRef} className="skill-item">
