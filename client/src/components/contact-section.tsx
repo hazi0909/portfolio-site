@@ -129,7 +129,7 @@ export default function ContactSection() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     <i className="fas fa-paper-plane mr-2"></i>
                     Send Message

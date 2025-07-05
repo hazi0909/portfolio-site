@@ -38,7 +38,7 @@ export default function ResumeSection() {
                 </p>
                 <Button
                   onClick={handleDownloadResume}
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   <i className="fas fa-download mr-2"></i>
                   Download PDF Resume
