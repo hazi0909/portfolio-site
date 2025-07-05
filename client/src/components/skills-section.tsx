@@ -22,18 +22,14 @@ function SkillItem({ name, level, color }: SkillItemProps) {
   return (
     <div ref={skillRef} className="skill-item">
       <div className="flex justify-between mb-2">
-        <span className="text-gray-700 dark:text-gray-300">{name}</span>
-        <span className={`${color}`}>{level}%</span>
+        <span className="text-card-foreground">{name}</span>
+        <span className="text-primary">{level}%</span>
       </div>
-      <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="bg-muted rounded-full h-2">
         <div 
-          className="skill-bar h-2 rounded-full"
+          className="skill-bar h-2 rounded-full bg-primary"
           style={{ 
-            width: `${animatedLevel}%`,
-            backgroundColor: color.includes('blue') ? '#2563eb' : 
-                           color.includes('violet') ? '#7c3aed' : 
-                           color.includes('emerald') ? '#059669' : 
-                           color.includes('orange') ? '#ea580c' : '#2563eb'
+            width: `${animatedLevel}%`
           }}
         />
       </div>
@@ -69,15 +65,15 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">Skills & Expertise</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-foreground">Skills & Expertise</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Frontend Skills */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border">
             <div className="flex items-center mb-6">
-              <i className="fas fa-code text-3xl text-blue-600 mr-4"></i>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Frontend</h3>
+              <i className="fas fa-code text-3xl text-primary mr-4"></i>
+              <h3 className="text-xl font-semibold text-card-foreground">Frontend</h3>
             </div>
             <div className="space-y-4">
               {frontendSkills.map((skill) => (
@@ -87,10 +83,10 @@ export default function SkillsSection() {
           </div>
 
           {/* Backend Skills */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border">
             <div className="flex items-center mb-6">
-              <i className="fas fa-server text-3xl text-violet-600 mr-4"></i>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Backend</h3>
+              <i className="fas fa-server text-3xl text-primary mr-4"></i>
+              <h3 className="text-xl font-semibold text-card-foreground">Backend</h3>
             </div>
             <div className="space-y-4">
               {backendSkills.map((skill) => (
@@ -100,10 +96,10 @@ export default function SkillsSection() {
           </div>
 
           {/* Development Skills */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border">
             <div className="flex items-center mb-6">
-              <i className="fas fa-code-branch text-3xl text-emerald-600 mr-4"></i>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Development</h3>
+              <i className="fas fa-code-branch text-3xl text-primary mr-4"></i>
+              <h3 className="text-xl font-semibold text-card-foreground">Development</h3>
             </div>
             <div className="space-y-4">
               {developmentSkills.map((skill) => (
@@ -113,10 +109,10 @@ export default function SkillsSection() {
           </div>
 
           {/* Tools & DevOps */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+          <div className="bg-card p-8 rounded-2xl shadow-lg border border-border">
             <div className="flex items-center mb-6">
-              <i className="fas fa-tools text-3xl text-orange-600 mr-4"></i>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Tools</h3>
+              <i className="fas fa-tools text-3xl text-primary mr-4"></i>
+              <h3 className="text-xl font-semibold text-card-foreground">Tools</h3>
             </div>
             <div className="space-y-4">
               {toolsSkills.map((skill) => (
