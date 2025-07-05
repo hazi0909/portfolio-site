@@ -46,24 +46,26 @@ export default function SkillsSection() {
     { name: "HTML/CSS", level: 75, color: "text-blue-600 dark:text-blue-400" },
     { name: "JavaScript", level: 75, color: "text-blue-600 dark:text-blue-400" },
     { name: "React.js", level: 80, color: "text-blue-600 dark:text-blue-400" },
+    { name: "Bootstrap", level: 85, color: "text-blue-600 dark:text-blue-400" },
   ];
 
   const backendSkills = [
     { name: "Node.js", level: 60, color: "text-violet-600 dark:text-violet-400" },
     { name: "Python", level: 65, color: "text-violet-600 dark:text-violet-400" },
-    { name: "MySQL", level: 60, color: "text-violet-600 dark:text-violet-400" },
+    { name: "FastAPI", level: 55, color: "text-violet-600 dark:text-violet-400" },
+    { name: "Express.js", level: 70, color: "text-violet-600 dark:text-violet-400" },
   ];
 
-  const mobileSkills = [
-    { name: "React Native", level: 65, color: "text-emerald-600 dark:text-emerald-400" },
-    { name: "Android", level: 60, color: "text-emerald-600 dark:text-emerald-400" },
-    { name: "Mobile UI/UX", level: 70, color: "text-emerald-600 dark:text-emerald-400" },
+  const developmentSkills = [
+    { name: "Web Development", level: 80, color: "text-emerald-600 dark:text-emerald-400" },
+    { name: "GitHub", level: 75, color: "text-emerald-600 dark:text-emerald-400" },
+    { name: "Model Training", level: 50, color: "text-emerald-600 dark:text-emerald-400" },
   ];
 
   const toolsSkills = [
-    { name: "Git", level: 50, color: "text-orange-600 dark:text-orange-400" },
+    { name: "MongoDB", level: 65, color: "text-orange-600 dark:text-orange-400" },
+    { name: "PostgreSQL", level: 60, color: "text-orange-600 dark:text-orange-400" },
     { name: "WordPress", level: 70, color: "text-orange-600 dark:text-orange-400" },
-    { name: "MongoDB", level: 50, color: "text-orange-600 dark:text-orange-400" },
   ];
 
   return (
@@ -97,14 +99,14 @@ export default function SkillsSection() {
             </div>
           </div>
 
-          {/* Mobile Development */}
+          {/* Development Skills */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
             <div className="flex items-center mb-6">
-              <i className="fas fa-mobile-alt text-3xl text-emerald-600 mr-4"></i>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Mobile</h3>
+              <i className="fas fa-code-branch text-3xl text-emerald-600 mr-4"></i>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Development</h3>
             </div>
             <div className="space-y-4">
-              {mobileSkills.map((skill) => (
+              {developmentSkills.map((skill) => (
                 <SkillItem key={skill.name} {...skill} />
               ))}
             </div>
