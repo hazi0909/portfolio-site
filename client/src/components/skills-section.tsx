@@ -61,7 +61,7 @@ export default function SkillsSection() {
 
   const toolsSkills = [
     { name: "MongoDB", level: 65, color: "#F59E0B" },
-    { name: "PostgreSQL", level: 60, color: "#F59E0B" },
+    { name: "MySQL", level: 60, color: "#F59E0B" },
     { name: "WordPress", level: 70, color: "#F59E0B" },
   ];
 
