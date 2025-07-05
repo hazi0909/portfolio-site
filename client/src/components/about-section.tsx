@@ -4,21 +4,24 @@ export default function AboutSection() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">About Me</h2>
+            <h2 className="text-4xl font-bold mb-6 text-foreground">Who Am I</h2>
             <p className="text-lg mb-6 text-foreground">
-              Hello! I'm a passionate full-stack developer with expertise in modern web technologies and AI integration. 
-              I graduated in Computer Science from the University of Central Punjab with a strong foundation in full-stack 
-              development using the MERN stack, Python, and mobile application development.
+              I'm <span className="text-primary font-semibold">Hamza Shabbir</span>, a passionate Frontend Developer from Pakistan who loves crafting clean, responsive, and interactive UIs — 
+              blending logic with creativity to build seamless digital experiences.
             </p>
             <p className="text-lg mb-6 text-foreground">
-              Through university projects and industry experience, I've developed strong skills in JavaScript, React.js, 
-              Node.js, and Python. I've built dynamic web applications, mobile apps, and AI-powered solutions including 
-              chatbots and recommendation systems. My experience spans interface design, backend integration, and API handling.
+              I specialize in <span className="text-primary font-semibold">React.js and JavaScript</span>, and have built 20+ high-performance websites with pixel-perfect design and smooth 
+              animations using Framer Motion.
             </p>
-            <p className="text-lg text-foreground">
-              I'm always eager to learn new technologies and take on challenging projects that push the boundaries of 
-              what's possible in web development and artificial intelligence.
+            <p className="text-lg mb-6 text-foreground">
+              I enjoy <span className="text-primary font-semibold">solving problems</span>, exploring new tools, and turning ideas into fast, scalable, and intuitive web experiences that not only 
+              work great — but feel great to use.
             </p>
+            <div className="mt-8">
+              <p className="text-xl italic text-primary font-medium border-l-4 border-primary pl-4">
+                "Every challenge is an opportunity to grow."
+              </p>
+            </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <img 
