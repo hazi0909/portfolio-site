@@ -23,13 +23,14 @@ function SkillItem({ name, level, color }: SkillItemProps) {
     <div ref={skillRef} className="skill-item">
       <div className="flex justify-between mb-2">
         <span className="text-card-foreground">{name}</span>
-        <span className="text-primary">{level}%</span>
+        <span style={{ color: color }}>{level}%</span>
       </div>
       <div className="bg-muted rounded-full h-2">
         <div 
-          className="skill-bar h-2 rounded-full bg-primary"
+          className="skill-bar h-2 rounded-full"
           style={{ 
-            width: `${animatedLevel}%`
+            width: `${animatedLevel}%`,
+            backgroundColor: color
           }}
         />
       </div>
@@ -39,29 +40,29 @@ function SkillItem({ name, level, color }: SkillItemProps) {
 
 export default function SkillsSection() {
   const frontendSkills = [
-    { name: "HTML/CSS", level: 75, color: "text-blue-600 dark:text-blue-400" },
-    { name: "JavaScript", level: 75, color: "text-blue-600 dark:text-blue-400" },
-    { name: "React.js", level: 80, color: "text-blue-600 dark:text-blue-400" },
-    { name: "Bootstrap", level: 85, color: "text-blue-600 dark:text-blue-400" },
+    { name: "HTML/CSS", level: 75, color: "#3B82F6" },
+    { name: "JavaScript", level: 75, color: "#3B82F6" },
+    { name: "React.js", level: 80, color: "#3B82F6" },
+    { name: "Bootstrap", level: 85, color: "#3B82F6" },
   ];
 
   const backendSkills = [
-    { name: "Node.js", level: 60, color: "text-violet-600 dark:text-violet-400" },
-    { name: "Python", level: 65, color: "text-violet-600 dark:text-violet-400" },
-    { name: "FastAPI", level: 55, color: "text-violet-600 dark:text-violet-400" },
-    { name: "Express.js", level: 70, color: "text-violet-600 dark:text-violet-400" },
+    { name: "Node.js", level: 60, color: "#8B5CF6" },
+    { name: "Python", level: 65, color: "#8B5CF6" },
+    { name: "FastAPI", level: 55, color: "#8B5CF6" },
+    { name: "Express.js", level: 70, color: "#8B5CF6" },
   ];
 
   const developmentSkills = [
-    { name: "Web Development", level: 80, color: "text-emerald-600 dark:text-emerald-400" },
-    { name: "GitHub", level: 75, color: "text-emerald-600 dark:text-emerald-400" },
-    { name: "Model Training", level: 50, color: "text-emerald-600 dark:text-emerald-400" },
+    { name: "Web Development", level: 80, color: "#10B981" },
+    { name: "GitHub", level: 75, color: "#10B981" },
+    { name: "Model Training", level: 50, color: "#10B981" },
   ];
 
   const toolsSkills = [
-    { name: "MongoDB", level: 65, color: "text-orange-600 dark:text-orange-400" },
-    { name: "PostgreSQL", level: 60, color: "text-orange-600 dark:text-orange-400" },
-    { name: "WordPress", level: 70, color: "text-orange-600 dark:text-orange-400" },
+    { name: "MongoDB", level: 65, color: "#F59E0B" },
+    { name: "PostgreSQL", level: 60, color: "#F59E0B" },
+    { name: "WordPress", level: 70, color: "#F59E0B" },
   ];
 
   return (
