@@ -1,5 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface Project {
   id: number;
@@ -12,60 +14,45 @@ interface Project {
 }
 
 export default function ProjectsSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
+
   const projects: Project[] = [
     {
       id: 1,
-      title: "AI Programming Language Chatbot",
-      description: "Intelligent chatbot designed to assist with programming language queries, providing real-time code suggestions and explanations using advanced AI integration.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["Python", "AI Integration", "NLP"],
-      demoLink: "#",
-      githubLink: "#"
+      title: "Tools Bag – Toolkit for images, files and AI tools",
+      description: `A modern web application that streamlines image, file, and AI tool management. Built with React.js and Node.js, it features a user-friendly interface and powerful AI integrations for enhanced productivity.<div class='italic text-right mt-2'>Aug 2024 – Nov 2024</div>`,
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+      technologies: ["React.js", "Node.js", "OpenAI", "Bootstrap"],
+      demoLink: "https://toolsbag.io/",
+      githubLink: ""
     },
     {
       id: 2,
-      title: "Restaurant Management System",
-      description: "Complete restaurant management solution with integrated Point of Sale, inventory tracking, and customer management. Built with modern web technologies.",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["React", "Node.js", "MySQL"],
-      demoLink: "#",
-      githubLink: "#"
+      title: "Restaurant Management System – Website with SQL database",
+      description: `A full-featured restaurant management platform with user authentication, dynamic image handling, and a responsive grid layout. Designed for seamless operations and an enhanced user experience.<div class='italic text-right mt-2'>Dec 2022 – Jan 2023</div>`,
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80",
+      technologies: ["React.js", "Node.js", "MySQL", "API"],
+      demoLink: "",
+      githubLink: ""
     },
     {
       id: 3,
-      title: "E-Commerce Web Application",
-      description: "Full-stack e-commerce platform with user authentication, product catalog, shopping cart functionality, and secure payment processing.",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
-      githubLink: "#"
+      title: "Image Gallery website – Website with SQL database",
+      description: `A responsive image gallery web app built with HTML, CSS, and JavaScript. Features dynamic image fetching, search, and a visually appealing, user-friendly layout.<div class='italic text-right mt-2'>Jan 2023 – Feb 2023</div>`,
+      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      technologies: ["HTML", "CSS", "JavaScript", "API"],
+      demoLink: "",
+      githubLink: ""
     },
     {
       id: 4,
-      title: "Movie Recommendation System",
-      description: "AI-powered movie recommendation system that analyzes user preferences and viewing history to suggest personalized movie recommendations.",
-      image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["Python", "Machine Learning", "Flask"],
-      demoLink: "#",
-      githubLink: "#"
-    },
-    {
-      id: 5,
-      title: "Mobile Application Development",
-      description: "Cross-platform mobile applications developed using React Native and Android Studio, featuring responsive design and native functionality.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["React Native", "Android Studio", "Mobile UI"],
-      demoLink: "#",
-      githubLink: "#"
-    },
-    {
-      id: 6,
-      title: "Dynamic Web Applications",
-      description: "Collection of dynamic web applications built with modern frameworks, featuring responsive interfaces, database integration, and API connectivity.",
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      technologies: ["JavaScript", "HTML/CSS", "API Integration"],
-      demoLink: "#",
-      githubLink: "#"
+      title: "Final year project UCP – AI driven programming language converter",
+      description: `An AI-powered platform for real-time, bidirectional code conversion between Node.js and Python. Combines advanced AI models with an intuitive interface for seamless code translation.<div class='italic text-right mt-2'>March 2024 – July 2025</div>`,
+      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      technologies: ["AI", "Node.js", "Python", "CodeT5"],
+      demoLink: "",
+      githubLink: ""
     }
   ];
 
@@ -75,35 +62,81 @@ export default function ProjectsSection() {
     "MongoDB": "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300",
     "MySQL": "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
     "Python": "bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300",
-    "Flask": "bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300",
+    "Bootstrap": "bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300",
     "AI Integration": "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300",
-    "NLP": "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300",
-    "Machine Learning": "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300",
+    "AI": "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300",
+    "React.js": "bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300",
     "JavaScript": "bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300",
     "HTML/CSS": "bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-300",
     "API Integration": "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
-    "React Native": "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
+    "OpenAI": "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
     "Android Studio": "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300",
     "Mobile UI": "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300"
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { y: 50, opacity: 0, scale: 0.9 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-800">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-800" ref={ref}>
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">Featured Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card key={project.id} className="project-card bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
-              <img 
+        <motion.h2 
+          className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white"
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+          transition={{ duration: 0.8 }}
+        >
+          Featured Projects
+        </motion.h2>
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              variants={cardVariants}
+              whileHover={{ 
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <Card className="project-card bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <motion.img 
                 src={project.image} 
                 alt={`${project.title} screenshot`} 
                 className="w-full h-48 object-cover"
+                  whileHover={{ 
+                    scale: 1.05,
+                    transition: { duration: 0.3 }
+                  }}
               />
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description}
-                </p>
+                  <div className="text-gray-600 dark:text-gray-300 mb-4" dangerouslySetInnerHTML={{ __html: project.description }} />
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <Badge 
@@ -115,25 +148,30 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex space-x-4">
-                  <a 
+                    <motion.a 
                     href={project.demoLink} 
                     className="text-blue-600 dark:text-blue-400 hover:underline"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                   >
                     <i className="fas fa-external-link-alt mr-1"></i>
                     Live Demo
-                  </a>
-                  <a 
+                    </motion.a>
+                    <motion.a 
                     href={project.githubLink} 
                     className="text-gray-600 dark:text-gray-400 hover:underline"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                   >
                     <i className="fab fa-github mr-1"></i>
                     GitHub
-                  </a>
+                    </motion.a>
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

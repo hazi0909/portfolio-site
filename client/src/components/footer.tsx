@@ -8,7 +8,7 @@ export default function Footer() {
             <p className="text-gray-400">Full Stack Developer | AI Enthusiast | Freelancer</p>
           </div>
           <div className="flex space-x-6">
-            <a href="https://linkedin.com/in/hamzashabbir" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://linkedin.com/in/hamzashabbir3" className="text-gray-400 hover:text-white transition-colors">
               <i className="fab fa-linkedin text-2xl"></i>
             </a>
             <a href="https://github.com/hazily18" className="text-gray-400 hover:text-white transition-colors">
