@@ -6,15 +6,18 @@ export default function AboutSection() {
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">About Me</h2>
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              Hello! I'm John, a passionate full-stack developer with over 5 years of experience creating digital solutions. 
-              My journey in technology started with a curiosity about how things work, and it has evolved into a deep love for building applications that make a difference.
+              Hello! I'm a passionate full-stack developer with expertise in modern web technologies and AI integration. 
+              I graduated in Computer Science from the University of Central Punjab with a strong foundation in full-stack 
+              development using the MERN stack, Python, and mobile application development.
             </p>
             <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-              I specialize in modern web technologies and have a particular interest in artificial intelligence and machine learning. 
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers.
+              Through university projects and industry experience, I've developed strong skills in JavaScript, React.js, 
+              Node.js, and Python. I've built dynamic web applications, mobile apps, and AI-powered solutions including 
+              chatbots and recommendation systems. My experience spans interface design, backend integration, and API handling.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              My goal is to continue pushing the boundaries of what's possible with technology while helping businesses and individuals achieve their digital aspirations.
+              I'm always eager to learn new technologies and take on challenging projects that push the boundaries of 
+              what's possible in web development and artificial intelligence.
             </p>
           </div>
           <div className="order-1 md:order-2 flex justify-center">

@@ -35,40 +35,48 @@ export default function ResumeSection() {
                     <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                       <li className="flex items-start">
                         <i className="fas fa-chevron-right text-blue-600 mr-2 mt-1"></i>
-                        5+ years of full-stack development experience
+                        Full-stack development with MERN stack
                       </li>
                       <li className="flex items-start">
                         <i className="fas fa-chevron-right text-blue-600 mr-2 mt-1"></i>
-                        Led development of 20+ web applications
+                        AI-powered chatbot and recommendation systems
                       </li>
                       <li className="flex items-start">
                         <i className="fas fa-chevron-right text-blue-600 mr-2 mt-1"></i>
-                        Expertise in React, Node.js, and Python
+                        Mobile app development with React Native
                       </li>
                       <li className="flex items-start">
                         <i className="fas fa-chevron-right text-blue-600 mr-2 mt-1"></i>
-                        AI/ML integration and implementation
+                        Database design and API integration
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-chevron-right text-blue-600 mr-2 mt-1"></i>
+                        Restaurant management system development
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Education & Certifications</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Education & Skills</h3>
                     <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                       <li className="flex items-start">
                         <i className="fas fa-graduation-cap text-violet-600 mr-2 mt-1"></i>
-                        B.S. Computer Science, Tech University
+                        B.S. Computer Science, University of Central Punjab
                       </li>
                       <li className="flex items-start">
-                        <i className="fas fa-certificate text-violet-600 mr-2 mt-1"></i>
-                        AWS Certified Developer
+                        <i className="fas fa-award text-violet-600 mr-2 mt-1"></i>
+                        CGPA: 2.8
                       </li>
                       <li className="flex items-start">
-                        <i className="fas fa-certificate text-violet-600 mr-2 mt-1"></i>
-                        Google Cloud Professional
+                        <i className="fas fa-code text-violet-600 mr-2 mt-1"></i>
+                        Programming: JavaScript, Python, HTML, CSS
                       </li>
                       <li className="flex items-start">
-                        <i className="fas fa-certificate text-violet-600 mr-2 mt-1"></i>
-                        Machine Learning Specialist
+                        <i className="fas fa-database text-violet-600 mr-2 mt-1"></i>
+                        Databases: MySQL, MongoDB
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-tools text-violet-600 mr-2 mt-1"></i>
+                        Tools: Git, WordPress, Android Studio
                       </li>
                     </ul>
                   </div>
