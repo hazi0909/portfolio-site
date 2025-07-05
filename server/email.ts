@@ -55,11 +55,15 @@ This message was sent from your portfolio website contact form.
   };
 }
 
-// Simple email service using built-in Node.js capabilities
+// Simple email service 
 export async function sendContactEmail(data: ContactFormData): Promise<{ success: boolean; message: string }> {
   try {
-    // For now, we'll log the email data and return success
-    // In a real implementation, you would integrate with your preferred email service
+    // Validate required data
+    if (!data.name || !data.email || !data.message) {
+      throw new Error("Missing required fields");
+    }
+
+    // Create email data for logging
     const emailData = createContactEmail(data, "john.smith@email.com"); // Replace with your actual email
     
     console.log("📧 Contact form submission:");
@@ -68,8 +72,8 @@ export async function sendContactEmail(data: ContactFormData): Promise<{ success
     console.log(`Message: ${data.message}`);
     console.log("---");
     
-    // TODO: Replace this with your preferred email service integration
-    // Examples: Nodemailer with Gmail, Resend, EmailJS, etc.
+    // Simulate successful email sending
+    // In production, integrate with your preferred email service here
     
     return {
       success: true,

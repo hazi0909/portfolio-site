@@ -50,6 +50,8 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
+      console.log('Sending contact form data:', formData);
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -58,7 +60,15 @@ export default function ContactSection() {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const result = await response.json();
+      console.log('Response result:', result);
 
       if (result.success) {
         toast({
@@ -83,7 +93,7 @@ export default function ContactSection() {
       console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: `Failed to send message: ${error instanceof Error ? error.message : 'Unknown error'}`,
         variant: "destructive"
       });
     } finally {
